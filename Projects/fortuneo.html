@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta viewport="width=device-width, initial-scale=1.0">
+  <title>Fortuneo ML Project (KNN)</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Enzo Djouhri</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../skills.html">Skills</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container">
+  <h2>Fortuneo Machine Learning Project (KNN)</h2>
+
+  <p class="fortuneo-subtitle">
+    Binary classification on a real-world, highly imbalanced dataset (~3% positives).<br>
+    Objective: detect clients likely to subscribe to an insurance policy.
+  </p>
+
+  <!-- ========================================================= -->
+  <!-- ==================== GRID 2x2 + STEP 5 ================== -->
+  <!-- ========================================================= -->
+
+  <div class="fortuneo-steps-grid">
+
+    <!-- Étape 1 -->
+    <div class="fortuneo-step-card">
+      <h3>1. Dataset & Challenges</h3>
+      <ul>
+        <li>Highly imbalanced dataset (~3% positives)</li>
+        <li>Mixed numerical & categorical variables</li>
+        <li>Noise affecting distance-based models</li>
+        <li>Main metric: Recall on class 1</li>
+      </ul>
+    </div>
+
+    <!-- Étape 2 -->
+    <div class="fortuneo-step-card">
+      <h3>2. Preprocessing Pipeline</h3>
+      <ul>
+        <li>Train/Test split before preprocessing</li>
+        <li>Label Encoding + StandardScaler</li>
+        <li>Outlier removal</li>
+        <li>Rebalancing using <strong>SMOTEENN</strong></li>
+        <li>Class weights tested to improve recall</li>
+      </ul>
+    </div>
+
+    <!-- Étape 3 -->
+    <div class="fortuneo-step-card">
+      <h3>3. KNN Model</h3>
+      <ul>
+        <li>KNN on rebalanced data</li>
+        <li>GridSearchCV for optimal k & distance metric</li>
+        <li>Bias–variance analysis</li>
+      </ul>
+    </div>
+
+    <!-- Étape 4 -->
+    <div class="fortuneo-step-card">
+      <h3>4. Evaluation</h3>
+      <ul>
+        <li>Confusion Matrix</li>
+        <li>Precision / Recall / F1-score</li>
+        <li>Prediction scatter</li>
+      </ul>
+    </div>
+
+    <!-- Étape 5 centrée -->
+    <div class="fortuneo-step-card fortuneo-step-full">
+      <h3>5. Insights</h3>
+      <ul>
+        <li>SMOTEENN improves minority detection</li>
+        <li>GridSearchCV strengthens model stability</li>
+        <li>Model tuned to prioritize recall</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- ===================== IMAGES FINALES ===================== -->
+  <!-- ========================================================= -->
+
+  <div class="fortuneo-img-block">
+    <span class="fortuneo-img-title">Classification Report</span>
+    <img src="../assets/fortuneo/classification_report.png" class="fortuneo-img" alt="Classification Report">
+  </div>
+
+  <div class="fortuneo-img-block">
+    <span class="fortuneo-img-title">Confusion Matrix</span>
+    <img src="../assets/fortuneo/confusion_matrix.png" class="fortuneo-img" alt="Confusion Matrix">
+  </div>
+
+  <div class="fortuneo-img-block">
+    <span class="fortuneo-img-title">Predicted Probabilities (Scatter)</span>
+    <img src="../assets/fortuneo/scatter.png" class="fortuneo-img" alt="Scatter Predictions">
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-contact">
+    <div class="tooltip">
+      <img src="../assets/email-icon.png" alt="Email">
+      <span class="tooltip-text">djouhrienzo@gmail.com</span>
+    </div>
+
+    <div class="tooltip">
+      <img src="../assets/phone-icon.png" alt="Phone">
+      <span class="tooltip-text">+33 6 61 06 33</span>
+    </div>
+
+    <a href="https://www.linkedin.com/in/enzo-djouhri-7129bb379/" target="_blank">
+      <img src="../assets/linkedin-icon.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://www.hackerrank.com/profile/djouhrienzo" target="_blank">
+      <img src="../assets/hackerrank-icon.png" alt="HackerRank">
+    </a>
+  </div>
+  <p>© 2025 Enzo Djouhri. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
